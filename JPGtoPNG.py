@@ -5,20 +5,19 @@ from PIL import Image
 
 
 #grab first and second argument 
-if len(sys.argv) == 2:
-    print(sys.argv[1])
-folder1 = sys.argv[1]
-folder2 = sys.argv[2]
+
+img_folder = sys.argv[1]
+output_folder = sys.argv[2]
 
 #Created a new folder to save new images 
 #check if new folder exist if not created it
-newpath = (f'.\{folder2}')
+newpath = (f'.\{output_folder}')
 if not os.path.exists(newpath):
     os.makedirs(newpath)
 
 #Get the current directory
 cwd = os.getcwd()    
-currentPath = cwd + str(f'\{folder1}')
+currentPath = cwd + str(f'\{img_folder}')
 
 #loop through Pokedex and 
 # convert images to png 
